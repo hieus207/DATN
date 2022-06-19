@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_img_margin_top">50dp</dimen>
+    <dimen name="login_pwd_margin_top">30dp</dimen>
+    <dimen name="login_edt_radius">15dp</dimen>
+    <dimen name="login_edt_width">300dp</dimen>
+    <dimen name="login_edt_heigh">60dp</dimen>
+    <dimen name="login_btn_width">135dp</dimen>
+    <dimen name="login_btn_heigh">50dp</dimen>
+
+</resources>

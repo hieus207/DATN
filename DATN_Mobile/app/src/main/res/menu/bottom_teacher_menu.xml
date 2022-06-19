@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeTeacherFragment" android:title="Home" android:icon="@drawable/ic_house_solid"/>
+    <item android:id="@+id/calenTeacherFragment" android:title="Calendar" android:icon="@drawable/ic_calendar"/>
+    <item android:id="@+id/projectTeacherFragment" android:title="Guides" android:icon="@drawable/ic_person_chalkboard_solid"/>
+    <item android:id="@+id/suggestTeacherFragment" android:title="List" android:icon="@drawable/ic_list_solid"/>
+    <item android:id="@+id/settingTeacherFragment" android:title="Setting" android:icon="@drawable/ic_setting"/>
+</menu>

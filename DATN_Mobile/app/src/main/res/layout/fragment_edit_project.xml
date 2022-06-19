@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".EditProjectFragment"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:background="@color/df_blue">
+
+<ImageView
+    android:id="@+id/btn_edtproject_back"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_backarrow"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_margin="20dp"
+    />
+
+<TextView
+    android:id="@+id/tv_edtproject_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Sửa đề tài"
+    android:layout_gravity="center"
+    style="@style/textBoldTitle"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="40dp"
+    android:textColor="@color/df_white"
+    />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_edtproject_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="25dp">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_linear"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên đề tài"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        style="@style/textRegular"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="15dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_edtproject_inpname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/df_white"
+            style="@style/editTextInfo"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đặt vấn đề"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        style="@style/textRegular"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="15dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_edtproject_inpquest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/df_white"
+            style="@style/editTextInfo"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hướng giải quyết"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        style="@style/textRegular"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="15dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_edtproject_inpsolution"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/df_white"
+            style="@style/editTextInfo"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nền tảng phát triển"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        style="@style/textRegular"/>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_edtproject_platforms"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="15dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+        >
+        <TextView
+            android:id="@+id/tv_edtproject_inpplatform"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/df_white"
+            style="@style/editTextInfo"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Công nghệ sử dụng"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        style="@style/textRegular"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="15dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_edtproject_inptechs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/df_white"
+            style="@style/editTextInfo"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Các chức năng chính"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        style="@style/textRegular"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="15dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_edtproject_inpfuncs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/df_white"
+            style="@style/editTextInfo"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kết quả mong muốn"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        style="@style/textRegular"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="15dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_edtproject_inpresult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/df_white"
+            style="@style/editTextInfo"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="120dp">
+
+        <ImageView
+            android:id="@+id/btn_edtproject_cancel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/btn_cancel"
+            />
+        <ImageView
+            android:id="@+id/btn_edtproject_add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/btn_accept"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

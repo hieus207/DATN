@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".DetailProjectTeacherFragment"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:background="@color/df_blue">
+
+<ImageView
+    android:id="@+id/btn_dtproject_teacher_back"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_backarrow"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_margin="20dp"
+    />
+
+<TextView
+    android:id="@+id/tv_dtproject_teacher_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Dự án"
+    android:layout_gravity="center"
+    style="@style/textBoldTitle"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="30dp"
+    android:textColor="@color/df_white"
+    />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_dtproject_teacher_title"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:background="@drawable/bg_linear"
+    android:layout_marginTop="65dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_linear"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_dtproject_teacher_projectname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Kết nối thông minh"
+            style="@style/textBold"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_dtproject_teacher_studentname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nguyễn Văn A"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            style="@style/textBold"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+
+            >
+            <TextView
+                android:id="@+id/tv_dtproject_teacher_quest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Đặt vấn đề \n hướng vấn đề"
+                android:padding="10dp"
+                android:background="@color/_bg_small_blue"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+
+            >
+            <TextView
+                android:id="@+id/tv_dtproject_teacher_solution"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Hướng giải quyết \n hướng vấn đề"
+                android:padding="10dp"
+                android:background="@color/_bg_small_blue"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+
+            >
+            <TextView
+                android:id="@+id/tv_dtproject_teacher_platform"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Nền tảng phát triển \n hướng vấn đề"
+                android:padding="10dp"
+                android:background="@color/_bg_small_blue"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+
+            >
+            <TextView
+                android:id="@+id/tv_dtproject_teacher_tech"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Công nghệ sử dụng \n hướng vấn đề"
+                android:padding="10dp"
+                android:background="@color/_bg_small_blue"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+
+            >
+            <TextView
+                android:id="@+id/tv_dtproject_teacher_func"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Các chức năng chính \n hướng vấn đề"
+                android:padding="10dp"
+                android:background="@color/_bg_small_blue"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+
+            >
+            <TextView
+                android:id="@+id/tv_dtproject_teacher_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Kết quả mong muốn \n hướng vấn đề"
+                android:padding="10dp"
+                android:background="@color/_bg_small_blue"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

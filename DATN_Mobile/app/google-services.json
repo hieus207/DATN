@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "353672768904",
+    "project_id": "thesistlu",
+    "storage_bucket": "thesistlu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353672768904:android:97eda760f67043ff49de3d",
+        "android_client_info": {
+          "package_name": "com.example.qldatn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353672768904-siv0lkosckj3980g0lruvaj4tavk7566.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4rcYKmPxl9Zu7cRyuDCQpl63yszGIUTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "353672768904-siv0lkosckj3980g0lruvaj4tavk7566.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

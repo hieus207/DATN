@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailProjectFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/df_blue">
+
+
+    <TextView
+        android:id="@+id/tv_shproject_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đề tài"
+        android:layout_gravity="center"
+        style="@style/textBoldTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/df_white"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_shproject_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/bg_linear"
+        android:layout_marginTop="65dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_linear"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_shproject_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Tên đề tài"
+            style="@style/textBold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_shproject_linksm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đường dẫn đồ án"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            style="@style/textRegular"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/_bg_small_blue"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đặt vấn đề"
+                    android:textColor="@color/black"
+                    style="@style/textRegular"
+                    />
+                <TextView
+                    android:id="@+id/tv_shproject_quest"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Hướng vấn đề"
+                    android:textColor="@color/black"
+                    style="@style/textRegular"
+                    />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/_bg_small_blue"
+                android:padding="10dp"
+                >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hướng giải quyết"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+            <TextView
+                android:id="@+id/tv_shproject_solution"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Hướng vấn đề"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/_bg_small_blue"
+                android:padding="10dp"
+                >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nền tảng phát triển"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+            <TextView
+                android:id="@+id/tv_shproject_platform"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="hướng vấn đề"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/_bg_small_blue"
+                android:padding="10dp"
+                >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Công nghệ sử dụng"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+            <TextView
+                android:id="@+id/tv_shproject_tech"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Hướng vấn đề"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/_bg_small_blue"
+                android:padding="10dp"
+                >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Các chức năng chính"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+            <TextView
+                android:id="@+id/tv_shproject_func"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="hướng vấn đề"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/_bg_small_blue"
+                android:padding="10dp"
+                >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kết quả mong muốn"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+            <TextView
+                android:id="@+id/tv_shproject_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="hướng vấn đề"
+                android:textColor="@color/black"
+                style="@style/textRegular"
+                />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    </ScrollView>
+
+
+    <ImageButton
+        android:id="@+id/btn_shproject_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="65dp"
+        android:background="@null"
+        />
+
+    <ImageButton
+        android:id="@+id/btn_shproject_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_view_calen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="65dp"
+        android:background="@null"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

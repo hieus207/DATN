@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="df_white">#F9FDFF</color>
+    <color name="df_purple">#5E74F0</color>
+    <color name="df_blue">#5686E1</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="_bg_grey">#C7C7C7</color>
+    <color name="_bg_small_blue">#B8D0FF</color>
+    <color name="_bg_project">#F5F7F9</color>
+    <color name="_bg_yellow">#E9D62D</color>
+    <color name="_bg_green">#86F8CF</color>
+    <color name="_bg_red">#FD7E7E</color>
+    <color name="_bg_calen_blue">#EEF1F8</color>
+    <color name="_custom">#FDABFC</color>
+</resources>

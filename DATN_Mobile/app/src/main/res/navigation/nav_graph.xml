@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment"
+    >
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.qldatn.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.qldatn.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.qldatn.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" >
+        <action
+            android:id="@+id/action_calendarFragment_to_detailCalendarFragment"
+            app:destination="@id/detailCalendarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectFragment"
+        android:name="com.example.qldatn.ProjectFragment"
+        android:label="fragment_project"
+
+        tools:layout="@layout/fragment_project" >
+        <action
+            android:id="@+id/action_projectFragment_to_detailProjectFragment"
+            app:destination="@id/detailProjectFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/detailProjectFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_projectFragment_to_createProjectFragment"
+            app:destination="@id/createProjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherFragment"
+        android:name="com.example.qldatn.TeacherFragment"
+        android:label="fragment_teacher"
+        tools:layout="@layout/fragment_teacher" >
+        <action
+            android:id="@+id/action_teacherFragment_to_detailTeacherFragment"
+            app:destination="@id/detailTeacherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.qldatn.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_settingFragment_to_infoStudentFragment"
+            app:destination="@id/infoStudentFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_mySuggestFragment"
+            app:destination="@id/mySuggestFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_changePwdFragment"
+            app:destination="@id/changePwdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.qldatn.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeTeacherFragment"
+            app:destination="@id/homeTeacherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailCalendarFragment"
+        android:name="com.example.qldatn.DetailCalendarFragment"
+        android:label="fragment_detail_calendar"
+        tools:layout="@layout/fragment_detail_calendar" />
+    <fragment
+        android:id="@+id/detailProjectFragment"
+        android:name="com.example.qldatn.DetailProjectFragment"
+        android:label="fragment_detail_project"
+        tools:layout="@layout/fragment_detail_project" >
+        <action
+            android:id="@+id/action_detailProjectFragment_to_projectFragment"
+            app:destination="@id/projectFragment" />
+        <action
+            android:id="@+id/action_detailProjectFragment_to_editProjectFragment"
+            app:destination="@id/editProjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProjectFragment"
+        android:name="com.example.qldatn.EditProjectFragment"
+        android:label="fragment_edit_project"
+        tools:layout="@layout/fragment_edit_project" >
+        <action
+            android:id="@+id/action_editProjectFragment_to_projectFragment"
+            app:destination="@id/projectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTeacherFragment"
+        android:name="com.example.qldatn.DetailTeacherFragment"
+        android:label="fragment_detail_teacher"
+        tools:layout="@layout/fragment_detail_teacher" />
+    <fragment
+        android:id="@+id/infoStudentFragment"
+        android:name="com.example.qldatn.InfoStudentFragment"
+        android:label="fragment_info_student"
+        tools:layout="@layout/fragment_info_student" />
+    <fragment
+        android:id="@+id/changePwdFragment"
+        android:name="com.example.qldatn.ChangePwdFragment"
+        android:label="fragment_change_pwd"
+        tools:layout="@layout/fragment_change_pwd" />
+    <fragment
+        android:id="@+id/mySuggestFragment"
+        android:name="com.example.qldatn.MySuggestFragment"
+        android:label="fragment_my_suggest"
+        tools:layout="@layout/fragment_my_suggest" />
+    <fragment
+        android:id="@+id/detailMySuggestFragment"
+        android:name="com.example.qldatn.DetailMySuggestFragment"
+        android:label="fragment_detail_my_suggest"
+        tools:layout="@layout/fragment_detail_my_suggest" />
+    <fragment
+        android:id="@+id/homeTeacherFragment"
+        android:name="com.example.qldatn.HomeTeacherFragment"
+        android:label="fragment_home_teacher"
+        tools:layout="@layout/fragment_home_teacher" />
+    <fragment
+        android:id="@+id/calenTeacherFragment"
+        android:name="com.example.qldatn.CalenTeacherFragment"
+        android:label="fragment_calen_teacher"
+        tools:layout="@layout/fragment_calen_teacher" >
+        <action
+            android:id="@+id/action_calenTeacherFragment_to_listCalenTeacherFragment"
+            app:destination="@id/listCalenTeacherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listCalenTeacherFragment"
+        android:name="com.example.qldatn.ListCalenTeacherFragment"
+        android:label="fragment_list_calen_teacher"
+        tools:layout="@layout/fragment_list_calen_teacher" >
+        <action
+            android:id="@+id/action_listCalenTeacherFragment_to_detailCalenTeacherFragment"
+            app:destination="@id/detailCalenTeacherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailCalenTeacherFragment"
+        android:name="com.example.qldatn.DetailCalenTeacherFragment"
+        android:label="fragment_detail_calen_teacher"
+        tools:layout="@layout/fragment_detail_calen_teacher" />
+    <fragment
+        android:id="@+id/projectTeacherFragment"
+        android:name="com.example.qldatn.ProjectTeacherFragment"
+        android:label="fragment_project_teacher"
+        tools:layout="@layout/fragment_project_teacher" >
+        <action
+            android:id="@+id/action_projectTeacherFragment_to_detailSuggestFragment"
+            app:destination="@id/detailSuggestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailProjectTeacherFragment"
+        android:name="com.example.qldatn.DetailProjectTeacherFragment"
+        android:label="fragment_detail_project_teacher"
+        tools:layout="@layout/fragment_detail_project_teacher" />
+    <fragment
+        android:id="@+id/suggestTeacherFragment"
+        android:name="com.example.qldatn.SuggestTeacherFragment"
+        android:label="fragment_suggest_teacher"
+        tools:layout="@layout/fragment_suggest_teacher" >
+        <action
+            android:id="@+id/action_suggestTeacherFragment_to_detailSuggestFragment"
+            app:destination="@id/detailSuggestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailSuggestFragment"
+        android:name="com.example.qldatn.DetailSuggestFragment"
+        android:label="fragment_detail_suggest"
+        tools:layout="@layout/fragment_detail_suggest" >
+        <action
+            android:id="@+id/action_detailSuggestFragment_to_suggestTeacherFragment"
+            app:destination="@id/suggestTeacherFragment" />
+        <action
+            android:id="@+id/action_detailSuggestFragment_to_infoStudentFragment"
+            app:destination="@id/infoStudentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingTeacherFragment"
+        android:name="com.example.qldatn.SettingTeacherFragment"
+        android:label="fragment_setting_teacher"
+        tools:layout="@layout/fragment_setting_teacher" >
+        <action
+            android:id="@+id/action_settingTeacherFragment_to_infoTeacherFragment"
+            app:destination="@id/infoTeacherFragment" />
+        <action
+            android:id="@+id/action_settingTeacherFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_settingTeacherFragment_to_changePwdFragment"
+            app:destination="@id/changePwdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoTeacherFragment"
+        android:name="com.example.qldatn.InfoTeacherFragment"
+        android:label="fragment_info_teacher"
+        tools:layout="@layout/fragment_info_teacher" />
+    <fragment
+        android:id="@+id/createProjectFragment"
+        android:name="com.example.qldatn.CreateProjectFragment"
+        android:label="fragment_create_project"
+        tools:layout="@layout/fragment_create_project" >
+        <action
+            android:id="@+id/action_createProjectFragment_to_projectFragment"
+            app:destination="@id/projectFragment" />
+    </fragment>
+
+</navigation>
