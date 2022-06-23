@@ -61,9 +61,10 @@ $(document).ready(function(){
             $("#stage_edit").hide();
     })
 
-    $("#btn-add-stage").on("click",addStage);
+    $("#btn-add-stage").hide();
+    // $("#btn-add-stage").on("click",addStage);
 
-    $(document).on('click', '.remove_stage', rmStage)
+    // $(document).on('click', '.remove_stage', rmStage)
 
     function addStage(){
         let input =
@@ -122,6 +123,7 @@ $(document).ready(function(){
         $("#phaseStart").attr("max",$("#phaseEnd").val())
 
     })
+    handleStageDate();
 
     function handleStageDate(){
         $(".stageStart").on("change",function(){
@@ -168,7 +170,7 @@ $(document).ready(function(){
     });
 
 
-    handleStageDate();
+
 
 
     $('.paginate').each(function(){

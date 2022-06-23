@@ -26,12 +26,13 @@ class TeacherImport implements ToModel
                     ['username' => "gv_".$row[3]],
                     ['role' => 1,
                     // Ngày sinh gì đấy
-                    'password' => md5(rand(100000,9999999)),
+                    'password' => md5($row[8]),
                     'token' => ""]
                 );
 
                 $major = Major::firstOrCreate(["name"=>$row[2]])->first();
-
+                // $time = strtotime($row[8]);
+                $UNIX_DATE = ($row[8] - 25569) * 86400;
                 $teacher = Teacher::firstOrCreate(
                     ["email" => $row[3]."@gv.tlu.edu.vn",
                     "teacher_id"=>$account->id],
@@ -39,7 +40,7 @@ class TeacherImport implements ToModel
                     "major_id" =>$major->id,
                     "teacher_name" =>$row[4],
                     "avt" =>"",
-                    "birthday"=>null,
+                    "birthday"=>gmdate("Y-m-d", $UNIX_DATE),
                     "phone"=>"",
                     "title"=>trim(mb_strtoupper($row[7],'UTF-8')),
                     "topic" =>""

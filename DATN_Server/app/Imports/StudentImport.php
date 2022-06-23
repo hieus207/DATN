@@ -22,10 +22,12 @@ class StudentImport implements ToModel
     {
         if(!is_null($row[3])){
             if($row[3]!="Mã sinh viên"){
+                $UNIX_DATE = ($row[8] - 25569) * 86400;
+                $birthday = gmdate("Y-m-d", $UNIX_DATE);
                 $account = Account::firstOrCreate(
                     ['username' => "sv_".$row[3]],
                     ['role' => 0,
-                    'password' => md5(rand(100000,9999999)),
+                    'password' => md5($birthday),
                     'token' => ""]
                 );
 
@@ -34,6 +36,7 @@ class StudentImport implements ToModel
                 // {
                 //     $major = Major::create(["name"=>$row[2]]);
                 // }
+
                 $student = Student::firstOrCreate(
                     ["email" => $row[3]."@e.tlu.edu.vn",
                     "student_id"=>$account->id],
@@ -41,7 +44,7 @@ class StudentImport implements ToModel
                     "major_id" =>$major->id,
                     "student_name" =>$row[4],
                     "avt" => "",
-                    'birthday'=>"",
+                    'birthday'=>$birthday,
                     'phone'=>"",
                     'cv'=>"",
                 ]);

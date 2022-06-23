@@ -5,7 +5,7 @@
         <form action="{{route("mngTeacher.search")}}" method="post">
             @csrf
             <div class="input-group w-25 float-right">
-                <input type="text" class="form-control" name="p_name" placeholder="Nhập tên đợt"  aria-describedby="basic-addon2">
+                <input type="text" class="form-control" name="p_name" placeholder="Nhập tên giảng viên"  aria-describedby="basic-addon2">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="submit">Tìm kiếm</button>
                 </div>

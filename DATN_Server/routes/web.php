@@ -21,13 +21,16 @@ use App\Models\Platform;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::get('/login', function () {
+    if(session('role')==2)
+    return redirect(route('mngPhase.index'));
+    else
     return view('admin.login');
 });
+
+
+// Route::get('/login', function () {
+//     return view('admin.login');
+// });
 Route::post('/login',[AccountController::class,'login'])->name('admin.login');
 
 Route::get('/logout',[AccountController::class,'logout'])->name("logout");

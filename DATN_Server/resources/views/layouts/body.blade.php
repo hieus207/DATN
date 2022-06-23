@@ -13,7 +13,7 @@
                <a href="{{route("mngPlatform.index");}}" class="list-group-item list-group-item-action  {{str_contains($_SERVER['REQUEST_URI'],"mngPlatform")==true?"active":""}}">Quản lý nền tảng</a>
                <a href="{{route("logout");}}" class="list-group-item list-group-item-action">Đăng xuất</a>
            </div>
-           <img src="{{url('/')."/storage/img/Yourchoice.png"}}" class="img_nav" srcset="">
+           <img src="{{url('/')."/storage/Yourchoice.png"}}" class="img_nav" srcset="">
        </div>
         <div class="col-md-9">
             @if (isset($errors))

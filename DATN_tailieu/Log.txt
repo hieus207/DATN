@@ -1,0 +1,32 @@
+- sửa tên use case quản lý thông tin các thứ
+- sửa tên nền tảng phát triển
+
+- null get thì thế nào
+----------------------------------
+CV
+- Bổ sung thiết kế giao diện web
+- Sửa sơ đồ usecase
+- Sửa sơ đồ class => Mã tài khoản, đề tài
+
+- sửa tên, dẫn nhập
+- fix code phân công giảng viên theo đề tài->teacherReview->migrate
+
+- thêm phần hiển thị giai đoạn
+
+- thêm tạo hội đồng tự động và phân công phản biện cho hội đồng
+- đổ nhiều phase dữ liệu để test
+----------------------
+php artisan make:model Major -m
+php artisan make:controller Api/AccountController --api --model=Account
+php artisan db:seed
+php artisan migrate:rollback
+php artisan serve --host 192.168.1.167 --port 3000
+php artisan make:middleware RoleMiddleware
+
+Ngôi nhà thông minh
+
+Điều khiển từ xa
+Hiện nay công nghệ thông tin phát triển vượt bậc dẫn đến các tiện ích ngày càng được phát triển. IOT cũng là 1 trong số đó.
+
+Ứng dụng IOT cho việc sử dụng các thiết bị trong nhà từ xa và tự động
+Đáp ứng tiến độ dự án và ứng dụng được cho nhiều ngôi nhà

@@ -36,14 +36,16 @@ class PhaseController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function getPhase(){
-        $phase= Phase::orderBy('startDate','DESC')->first();
+        $phases= Phase::orderBy('startDate','DESC')->get();
+        // $phase= Phase::orderBy('startDate','DESC')->first();
         $now = now()->toDateString();
-        if($phase->startDate<=$now&&$now<=$phase->endDate){
-            return $phase->id;
+        foreach($phases as $phase){
+            if($phase->startDate<=$now&&$now<=$phase->endDate){
+                return $phase->id;
+            }
         }
         return -1;
     }
-
     public function index()
     {
         //
@@ -287,24 +289,6 @@ class PhaseController extends Controller
             return  redirect(route('mngPhase.show',["mngPhase"=>$request->phase_id]));
         }
         if($request->action == "review"){
-            // dd($request->phase_id);
-            // $students = StudentPhase::where("phase_id",$request->phase_id)->get();
-            // foreach($students as $student){
-            //     $dup_std = TeacherReviewer::where(["student_id"=>$student->student_id,"phase_id"=>$request->phase_id])->first();
-            //     if(is_null($dup_std)){
-
-            //         $tc = Proposal::where(["student_id"=>$student->student_id,"phase_id"=>$request->phase_id])->first();
-
-            //         $dup_id = -1;
-            //         if(!is_null($tc)){
-            //             $dup_id=$tc->teacher_id;
-            //         }
-            //         $tp = TeacherPhase::where(["phase_id"=>$request->phase_id])->where("teacher_id","<>",$dup_id)->orderBy('review_std','ASC')->first();
-            //         TeacherReviewer::create(["teacher_id"=>$tp->teacher_id,"student_id"=>$student->student_id,"phase_id"=>$request->phase_id]);
-            //         $tp->review_std +=1;
-            //         $tp->save();
-            //     }
-            // }
             Review::dispatch($request->phase_id);
             session(["message"=>"Đang thực thi phân công phản biện!"]);
             return  redirect(route('mngPhase.show',["mngPhase"=>$request->phase_id]));
@@ -365,9 +349,6 @@ class PhaseController extends Controller
     }
     public function store(Request $request)
     {
-        //
-        // CHECK TIME
-
         $check =  $this->checkPhase($request);
         if($check['rs'])
             $phase = Phase::create($request->all());
@@ -384,12 +365,24 @@ class PhaseController extends Controller
         return redirect(route('mngPhase.index'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Phase  $phase
-     * @return \Illuminate\Http\Response
-     */
+
+
+    public function getStage(){
+        $phase_id = $this->getPhase();
+        $stt = -1;
+        if($phase_id!=-1){
+            $stages = Stage::where("phase_id",$phase_id)->orderBy('startDate','ASC')->get();
+            $now = now()->toDateString();
+            foreach($stages as $key=>$value){
+                if($value->startDate<=$now){
+                    $stt = $key;
+                }
+            }
+        }
+        return $stt;
+    }
+
+
     public function show(Phase $mngPhase)
     {
         //
@@ -406,6 +399,13 @@ class PhaseController extends Controller
         $mngPhase->totalStudent = StudentPhase::where('phase_id',$mngPhase->id)->count();
         $mngPhase->totalStudentAvailable = $mngPhase->totalStudent - ($mngPhase->totalQuota - $mngPhase->totalQuotaAvailable);
         $mngPhase->totalStudentNotReview = $mngPhase->totalStudent - TeacherReviewer::where("phase_id",$mngPhase->id)->count();
+        $mngPhase->stage = -1;
+
+        if($this->getPhase()==$mngPhase->id){
+            $mngPhase->stage = $this->getStage();
+            // session(['message'=>"day la stage ".$this->getStage()]);
+        }
+
         return view('phase.show',compact('mngPhase','message','errors'));
     }
 

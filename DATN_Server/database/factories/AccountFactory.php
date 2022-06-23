@@ -16,9 +16,9 @@ class AccountFactory extends Factory
     public function definition()
     {
         return [
-            'username' => $this->faker->userName(),
-            'role' => random_int(0,2),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'
+            'username' => 'admin',
+            'role' => 2,
+            'password' => '21232f297a57a5a743894a0e4a801fc3'
         ];
     }
 

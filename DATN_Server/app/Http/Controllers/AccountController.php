@@ -33,7 +33,7 @@ class AccountController extends Controller
             session(["token"=>$account->token]);
             session(["role"=>$account->role]);
 
-            return view('admin.dashboard');
+            return redirect(route('mngPhase.index'));
         }
         else
             return view('admin.login');

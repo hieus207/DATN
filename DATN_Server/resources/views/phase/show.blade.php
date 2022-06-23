@@ -166,10 +166,13 @@
         <input type="hidden" name="phase_id" value="{{ $mngPhase->id }}">
         <a name="" id="" class="mt-3 button-28 btn-phase shadow"
             href="{{ route('mngPhase.edit', ['mngPhase' => $mngPhase]) }}" role="button">Sửa</a>
-        <button type="submit" class="mt-3 btn-phase button-28 shadow" role="button" name="action" value="assignment">Phân
-            công hướng dẫn</button>
+        @if ($mngPhase->stage==2)
+            <button type="submit" class="mt-3 btn-phase button-28 shadow" role="button" name="action" value="assignment">Phân
+                công hướng dẫn</button>
+        @endif
+        @if ($mngPhase->stage==5)
         <button type="submit" class="mt-3 btn-phase button-28 shadow" name="action" value="review">Phân công phản
             biện</button>
-
+        @endif
     </form>
 @endsection
